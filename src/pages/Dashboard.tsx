@@ -216,7 +216,7 @@ const Dashboard = () => {
   const paginatedPackages = filteredPackages.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
   return (
-    <div className="min-h-screen bg-background p-6">
+  <div className="min-h-screen bg-background p-2 sm:p-4 md:p-6">
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Header */}
         <div className="flex flex-col gap-4 mb-6">
@@ -263,14 +263,14 @@ const Dashboard = () => {
         </div>
 
 
-        {/* Filters Section */}
-        <div className="mb-8 sticky top-0 z-30 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all border-b border-muted shadow-sm px-2 md:px-0 py-4">
+  {/* Filters Section */}
+  <div className="mb-8 md:sticky md:top-0 z-30 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all border-b border-muted shadow-sm px-2 md:px-0 py-4">
           <h2 className="text-2xl font-semibold mb-2 flex items-center gap-2">
             <Search className="h-6 w-6 text-primary" />
             Filter Packages
           </h2>
-          <div className="bg-card rounded-xl shadow-sm p-4 md:p-6 border border-muted flex flex-col gap-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-8 gap-4">
+          <div className="bg-card rounded-xl shadow-sm p-2 sm:p-4 md:p-6 border border-muted flex flex-col gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-8 gap-2 sm:gap-4">
               <Select value={categoryFilter} onValueChange={setCategoryFilter}>
                 <SelectTrigger>
                   <SelectValue placeholder="Category" />
