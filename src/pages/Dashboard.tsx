@@ -304,7 +304,7 @@ const Dashboard = () => {
         </div>
 
         {/* Filters */}
-        <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
+        <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm border-b border-gray-200 p-6 mb-8 shadow-sm">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-8 h-8 bg-[#03a9e7] bg-opacity-10 rounded-lg flex items-center justify-center">
               <Filter className="h-4 w-4 text-[#03a9e7]" />
@@ -494,8 +494,8 @@ const Dashboard = () => {
                     </div>
                   </CardHeader>
                   
-                  <CardContent className="space-y-4">
-                    <div className="bg-gray-50 rounded-lg p-4">
+                  <CardContent className="space-y-4 text-left">
+                    <div className="bg-gray-50 rounded-lg py-4">
                       <div className="text-sm text-gray-600 mb-1">Minimum Loan Size</div>
                       <div className="text-xl font-semibold text-[#052d4a]">
                         {formatCurrency(pkg.min_loan_size)}
